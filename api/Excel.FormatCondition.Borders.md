@@ -32,6 +32,20 @@ This limitation doesn't apply to **[Range.Borders](Excel.Range.Borders.md)**.
 
 ## Example
 
+This example sets the color of the bottom border of cell B2 on Sheet1 to a thin red border.
+
+```vb
+Sub SetRangeBorder()
+
+ With Worksheets("Sheet1").Range("B2").Borders(xlEdgeBottom)
+     .LineStyle = xlContinuous
+     .Weight = xlThin
+     .ColorIndex = 3
+ End With
+
+End Sub
+```
+
 This example sets the bottom border of the first conditional-format rule for cell B2 on Sheet1 to a thin red border.
 
 ```vb
